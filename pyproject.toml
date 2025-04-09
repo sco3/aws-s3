@@ -1,0 +1,14 @@
+[project]
+name = "aws-s3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "boto3>=1.37.30",
+    "mypy-boto3>=1.37.0",
+    "boto3-stubs[s3]>=1.37.8",
+]
+
+[[tool.uv.index]]
+url = "https://area22-493334834594.d.codeartifact.eu-west-1.amazonaws.com/pypi/area22/simple/"

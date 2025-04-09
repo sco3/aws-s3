@@ -1,0 +1,9 @@
+[package]
+name = "aws-s3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = "1.6.1"
+aws-sdk-s3 = {version="1.82.0",features = ["behavior-version-latest"]}
+tokio = {version="1.44.2", features = ["full"]}

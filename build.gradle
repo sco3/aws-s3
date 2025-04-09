@@ -1,0 +1,39 @@
+plugins {
+    id "java"
+    id "eclipse"
+}
+
+group = "sco3"
+version = "1.0.0-SNAPSHOT"
+
+compileJava {
+    sourceCompatibility = '21'
+    targetCompatibility = '21'
+}
+
+test {
+    useJUnitPlatform()    // Use JUnit 5 platform for running tests
+}
+
+
+repositories {
+    flatDir {
+        dirs "lib"
+    }
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+
+	implementation 'software.amazon.awssdk:s3:2.31.17'
+}
+
+
+task run(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    mainClass = "sco3.PrefixLister"
+}
+
