@@ -15,8 +15,7 @@ async fn main() {
 
     while let Some(result) = response.next().await {
         if let Ok(out) = result {
-            let prefixes = out.common_prefixes();
-            for prefix in prefixes {
+            for prefix in out.common_prefixes() {
                 if let Some(name) = prefix.prefix() {
                     println!("{}", name);
                 }
