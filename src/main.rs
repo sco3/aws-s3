@@ -24,10 +24,12 @@ async fn main() {
                 let prefixes = out.common_prefixes();
                 for prefix in prefixes {
                     match prefix.prefix() {
-                        Some(prefix) => {
-                            println!("{}", prefix);
+                        Some(name) => {
+                            println!("{}", name);
                         }
-                        None => {}
+                        None => {
+                            eprintln!("No prefix? {:?}", out)
+                        }
                     }
                 }
             }
