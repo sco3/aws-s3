@@ -7,3 +7,16 @@ edition = "2021"
 aws-config = "1.6.1"
 aws-sdk-s3 = {version="1.82.0",features = ["behavior-version-latest"]}
 tokio = {version="1.44.2", features = ["full"]}
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "short"
+path = "src/short.rs"
+
+[[bin]]
+name = "shortest"
+path = "src/shortest.rs"
+

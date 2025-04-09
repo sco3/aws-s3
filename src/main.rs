@@ -1,14 +1,8 @@
-use aws_config;
-use aws_config::BehaviorVersion;
+use aws_config::ConfigLoader;
 use aws_sdk_s3::Client;
-
 #[tokio::main]
 async fn main() {
-    let sh_cfg = aws_config::defaults(BehaviorVersion::latest()) //
-        .load()
-        .await;
-
-    let s3 = Client::new(&sh_cfg);
+    let s3 = Client::new(&ConfigLoader::default().load().await);
 
     let mut response = s3
         .list_objects_v2()
@@ -38,6 +32,4 @@ async fn main() {
             }
         }
     }
-
-    println!("Finish")
 }
