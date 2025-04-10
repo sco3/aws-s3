@@ -7,8 +7,8 @@ group = "sco3"
 version = "1.0.0-SNAPSHOT"
 
 compileJava {
-    sourceCompatibility = '21'
-    targetCompatibility = '21'
+    sourceCompatibility = '23'
+    targetCompatibility = '23'
 }
 
 test {
