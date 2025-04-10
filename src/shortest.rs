@@ -15,7 +15,7 @@ async fn main() {
 
     while let Some(result) = response.next().await {
         for prefix in result.unwrap().common_prefixes() {
-            println!("{}", &prefix.prefix().unwrap());
+            println!("{}", prefix.prefix().unwrap());
         }
     }
 }

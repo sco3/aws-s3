@@ -28,7 +28,7 @@ async fn main() {
                 }
             }
             Err(e) => {
-                eprintln!("Fail: {}", e)
+                eprintln!("Fail: {:?}", e)
             }
         }
     }
