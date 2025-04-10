@@ -18,7 +18,7 @@ def list_folders_with_paginator(bucket: str, prefix: str = "") -> None:
         if "CommonPrefixes" in page:
             for prefix in page["CommonPrefixes"]:
                 prefix_name = prefix["Prefix"]
-                print(f"{prefix_name} {prefix}")
+                print(f"{prefix_name}")
 
 
 if __name__ == "__main__":
