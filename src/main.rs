@@ -1,5 +1,7 @@
 use aws_config::ConfigLoader;
 use aws_sdk_s3::Client;
+use log::error;
+
 #[tokio::main]
 async fn main() {
     let s3 = Client::new(&ConfigLoader::default().load().await);
@@ -22,13 +24,13 @@ async fn main() {
                             println!("{}", name);
                         }
                         None => {
-                            eprintln!("No prefix? {:?}", prefix)
+                            error!("No prefix? {:?}", prefix)
                         }
                     }
                 }
             }
             Err(e) => {
-                eprintln!("Fail: {:?}", e)
+                error!("Fail: {:?}", e)
             }
         }
     }
