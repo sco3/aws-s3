@@ -22,7 +22,7 @@ async fn main() {
                             println!("{}", name);
                         }
                         None => {
-                            eprintln!("No prefix? {:?}", out)
+                            eprintln!("No prefix? {:?}", prefix)
                         }
                     }
                 }
