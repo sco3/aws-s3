@@ -22,4 +22,4 @@ def list_folders_with_paginator(bucket: str, prefix: str = "") -> None:
 
 
 if __name__ == "__main__":
-    list_folders_with_paginator("dz-bucket-123", "agent_")
+    list_folders_with_paginator("dz-bucket-1234", "agent_")
